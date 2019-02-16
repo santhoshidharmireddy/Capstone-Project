@@ -1,5 +1,5 @@
 
-BUILDING RECOMMENDER SYSTEMS (FunkSVD and ALS models):
+### BUILDING RECOMMENDER SYSTEMS (FunkSVD and ALS models):
 
 Goal: Come up with collaborative filtering recommender systems for Amazon Clothing, Shoes, and Jewelry products. I used Amazon Clothing, Shoes, and Jewelry reviews dataset from http://jmcauley.ucsd.edu/data/amazon/links.html.
 
@@ -13,11 +13,11 @@ placeholer for minimizing equation
 ALS Model Framework:
 Because both qi and pu are unknowns, the below equation is not convex. However, if we fix one of the unknowns, the optimization problem becomes quadratic and can be resolved optimally. Thus, ALS techniques rotate between fixing the qi's and fixing the pu's. When all pu's are fixed, the system recomputes the qi's by solving a least-squares problem, and vice versa. This ensures that each step decreases the below equation until convergence. While in general stochastic gradient descent is easier and faster than ALS, ALS is favorable in at least two cases. The first is when the system computes each qi independently of the other item factors and computes each pu independently of the other user factors. This gives rise to potentially massive parallalization of the algorithm. The second case is for systems centered in implicit data. Because the training set cannot be considered sparse, looping over each single training case as gradient descent does would not be practical. ALS can efficiently handle such cases. 
 
-K - NEAREST NEIGHBORS RECOMMENDER SYSTEM:
+### K - NEAREST NEIGHBORS RECOMMENDER SYSTEM:
 
 Goal: Build an item-based collaborative filtering system based on K - nearest neighbors to find the three most similar products. I used Amazon Home and Kitchen reviews dataset from http://jmcauley.ucsd.edu/data/amazon/links.html. Also, build K neighbors classifier model to predict overall review rating based on text reviews. 
 
-SENTIMENT ANALYSIS:
+### SENTIMENT ANALYSIS:
 
 Goals: 
     
