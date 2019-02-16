@@ -22,12 +22,11 @@ Goal: Build an item-based collaborative filtering system based on K - nearest ne
 Goals: 
     
     1. Perform sentiment analysis using the following techniques:
-        a. Logistic Regression with TFIDF vectorizer
-        b. Logistic Regression with TFIDF vectorizer and n-grams techniques
+        a. Logistic regression with TFIDF vectorizer
+        b. Logistic regression with TFIDF vectorizer and n-grams techniques
         c. SVM classifier with TFIDF vectorizer and n-grams techniques
-        d. Naive Bayes Classifier with TFIDF vectorizer and n-grams techniques
-    2. Analyzing the performance metrics of each of those above models
-
+        d. Naive bayes with TFIDF vectorizer and n-grams techniques
+        
 I noticed that sklearn's svm.SVC() classifier is extremely slow. 
     Support Vector Machines are powerful tools, but their compute and storage requirements increase rapidly with the number of training vectors. The core of an SVM is quadratic programming problem (QP), separating support vectors from the rest of the training data. Also, note that for the linear case, the algorithm used in LinearSVC by the liblinear implementation is much more efficient than its libsvm-based SVC counterpart and can scale almost linearly to millions of samples and/or features. SVM - training with nonlinear-kernels, which is default in sklearn's SVC, is complexity-wise approximately: 0(n_samples^2 * n_features). This applies to to the SMO-algorithm used within libsvm, which is the core-solver in sklearn for this type of problem. This changes much when no kernels are used and one uses sklearn.svm.LinearSVC (based on liblinear) or sklearn.linear_model.SGDClassifier.
 
