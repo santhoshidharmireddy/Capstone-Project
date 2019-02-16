@@ -1,5 +1,5 @@
 
-### BUILDING RECOMMENDER SYSTEMS (FunkSVD and ALS models):
+### BUILD RECOMMENDER SYSTEMS (FunkSVD and ALS models):
 
 Goal: Come up with collaborative filtering recommender systems for Amazon Clothing, Shoes, and Jewelry products. I used Amazon Clothing, Shoes, and Jewelry reviews dataset from http://jmcauley.ucsd.edu/data/amazon/links.html.
 
