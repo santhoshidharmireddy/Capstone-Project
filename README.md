@@ -1,7 +1,7 @@
 
-# Designing recommendater system and predicting customer sentiment using data science techniques
+### Designing recommendater system and predicting customer sentiment using data science techniques
 
-## Summary
+### Summary
 
 Within this e-commerce data science project, there are 3 sub-projects:
 1/ predicting missing rating for a product based on customer's past purchases and past ratings for other products (Amazon's Clothing, Shoes and Jewelry dataset)
@@ -10,7 +10,7 @@ Within this e-commerce data science project, there are 3 sub-projects:
 
 I used Amazon DataSet from http://jmcauley.ucsd.edu/data/amazon/links.html. All the three sub-projects have separate jupiter notebooks (written in python).
 
-## Project#1: PREDICT MISSING RATING (FunkSVD & ALS models)
+### Project#1: PREDICT MISSING RATING (for a product using FunkSVD & ALS models)
 
 Summary:
 
@@ -25,11 +25,11 @@ Placeholer for minimizing equation
 ALS Model Framework:
 Because both qi and pu are unknowns, the below equation is not convex. However, if we fix one of the unknowns, the optimization problem becomes quadratic and can be resolved optimally. Thus, ALS techniques rotate between fixing the qi's and fixing the pu's. When all pu's are fixed, the system recomputes the qi's by solving a least-squares problem, and vice versa. This ensures that each step decreases the cost function equation until convergence. While in general stochastic gradient descent is easier and faster than ALS, ALS is favorable in at least two cases. The first is when the system computes each qi independently of the other item factors and computes each pu independently of the other user factors. This gives rise to potentially massive parallalization of the algorithm. The second case is for systems centered in implicit data. Because the training set cannot be considered sparse, looping over each single training case as gradient descent does would not be practical. ALS can efficiently handle such cases. 
 
-## Project#2: COLLABORATIVE FILTERING RECOMMENDER SYSTEM (K - NEAREST NEIGHBORS ALGORITHM)
+### Project#2: COLLABORATIVE FILTERING RECOMMENDER SYSTEM (K - nearest neighbors algorithm)
 
 Goal: Build an item-based collaborative filtering system based on K - nearest neighbors to find the three most similar products. I used Amazon Home and Kitchen reviews dataset from http://jmcauley.ucsd.edu/data/amazon/links.html. Also, build K neighbors classifier model to predict overall review rating based on text reviews. 
 
-## Project#3: SENTIMENT ANALYSIS FOR GIVEN PRODUCT FOR A GIVEN CUSTOMER
+### Project#3: SENTIMENT ANALYSIS (for a given product and a given customer)
 
 Goals:
 
@@ -44,21 +44,21 @@ I noticed that sklearn's svm.SVC() classifier is extremely slow.
     Support Vector Machines are powerful tools, but their compute and storage requirements increase rapidly with the number of training vectors. The core of an SVM is quadratic programming problem (QP), separating support vectors from the rest of the training data. Also, note that for the linear case, the algorithm used in LinearSVC by the liblinear implementation is much more efficient than its libsvm-based SVC counterpart and can scale almost linearly to millions of samples and/or features. SVM - training with nonlinear-kernels, which is default in sklearn's SVC, is complexity-wise approximately: 0(n_samples^2 * n_features). This applies to to the SMO-algorithm used within libsvm, which is the core-solver in sklearn for this type of problem. This changes much when no kernels are used and one uses sklearn.svm.LinearSVC (based on liblinear) or sklearn.linear_model.SGDClassifier.
 
 
-## Algorithms used in this project:
+### Algorithms used in this project
 
-### Predict missing rating
+#### Predict missing rating
 1. FunkSVD
 2. ALS
 
-### Recommender System
+#### Recommender System
 1. K - Nearest Neighbors (Collaborative filtering recommender system)
 
-### Sentiment Analysis
+#### Sentiment Analysis
 1. Logistic Regression
 2. SVM
 3. Naive Bayes
 
-## References:
+### References
 
 1. Matrix Factorization: http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/
 2. Recommendation Systems: http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
