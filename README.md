@@ -4,9 +4,9 @@
 ### Summary
 
 Within this e-commerce data science project, there are 3 sub-projects:
-1/ predicting missing rating for a product based on customer's past purchases and past ratings for other products (Amazon's Clothing, Shoes and Jewelry dataset)
-2/ come up with product recommendater system for customers based on their purchase history and product reviews (Amazon's home and kitchen dataset)
-3/ perform sentiment analysis on any given product for a given customer (Amazon's home and kitchen dataset)
+1. predicting missing rating for a product based on customer's past purchases and past ratings for other products (Amazon's Clothing, Shoes and Jewelry dataset)
+2. come up with product recommendater system for customers based on their purchase history and product reviews (Amazon's home and kitchen dataset)
+3. perform sentiment analysis on any given product for a given customer (Amazon's home and kitchen dataset)
 
 I used Amazon DataSet from http://jmcauley.ucsd.edu/data/amazon/links.html. All the three sub-projects have separate jupiter notebooks (written in python).
 
@@ -47,20 +47,20 @@ I noticed that sklearn's svm.SVC() classifier is extremely slow.
 ### Algorithms used in this project
 
 #### Predict missing rating
-1. FunkSVD
-2. ALS
+* FunkSVD
+* ALS
 
 #### Recommender System
-1. K - Nearest Neighbors (Collaborative filtering recommender system)
+* K - Nearest Neighbors (Collaborative filtering recommender system)
 
 #### Sentiment Analysis
-1. Logistic Regression
-2. SVM
-3. Naive Bayes
+* Logistic Regression
+* SVM
+* Naive Bayes
 
 ### References
 
-1. Matrix Factorization: http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/
-2. Recommendation Systems: http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
-3. http://jmcauley.ucsd.edu/data/amazon/
-4. Text Processing: https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/
+* Matrix Factorization: http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/
+* Recommendation Systems: http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
+* http://jmcauley.ucsd.edu/data/amazon/
+* Text Processing: https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/
