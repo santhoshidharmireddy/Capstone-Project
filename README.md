@@ -1,5 +1,5 @@
 
-## Designing recommendater system and predicting customer sentiment using data science techniques
+## Designing a recommender system and predicting customer sentiment using data science techniques
 
 ### Summary
 
