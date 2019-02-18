@@ -10,7 +10,7 @@ Within this e-commerce data science project, there are 3 sub-projects:
 
 I used Amazon DataSet from http://snap.stanford.edu/data/web-Amazon.html. All the three sub-projects have separate jupiter notebooks (written in python).
 
-### Project#1: PREDICT MISSING RATING (for a product using FunkSVD & ALS models)
+### Project_1: PREDICT MISSING RATING (for a product using FunkSVD & ALS models)
 
 #### Summary:
 
@@ -28,11 +28,11 @@ Placeholer for minimizing equation
 
 ALS model decomposes ratings matrix into two matrices eg: P and Q. ALS rechnique rotate between fixing the Q's and fixing the P's. When all P's are fixed, the system rcomputes the Q's by solving a least-squares problem, and vice versa. This ensures that each step decreases the cost function equation until convergence. While SGD is easier and faster than ALS, ALS has at least two favorable cases. The first is when the system computes each Q independently of the other item factors and computes each P independently of the other user factors. This gives rise to potentially massive parallalization of the algorithm. The second case is for systems centered in implicit data. Because the training set cannot be considered sparse, looping over each single training case as gradient descent does would not be practical. ALS can efficiently handle such cases. 
 
-### Project#2: COLLABORATIVE FILTERING RECOMMENDER SYSTEM (K - nearest neighbors algorithm)
+### Project_2: COLLABORATIVE FILTERING RECOMMENDER SYSTEM (K - nearest neighbors algorithm)
 
 Goal: Build an item-based collaborative filtering system based on K - nearest neighbors to find the three most similar products. I used Amazon Home and Kitchen reviews dataset from http://snap.stanford.edu/data/web-Amazon.html. Also, build K neighbors classifier model to predict overall review rating based on text reviews. 
 
-### Project#3: SENTIMENT ANALYSIS (for a given product and a given customer)
+### Project_3: SENTIMENT ANALYSIS (for a given product and a given customer)
 
 #### Goals:
 
