@@ -8,7 +8,7 @@ Within this e-commerce data science project, there are 3 sub-projects:
 2. come up with product recommendater system for customers based on their purchase history and product reviews (Amazon's home and kitchen dataset)
 3. perform sentiment analysis on any given product for a given customer (Amazon's home and kitchen dataset)
 
-I used Amazon DataSet from http://jmcauley.ucsd.edu/data/amazon/links.html. All the three sub-projects have separate jupiter notebooks (written in python).
+I used Amazon DataSet from http://snap.stanford.edu/data/web-Amazon.html. All the three sub-projects have separate jupiter notebooks (written in python).
 
 ### Project#1: PREDICT MISSING RATING (for a product using FunkSVD & ALS models)
 
@@ -29,7 +29,7 @@ ALS model decomposes ratings matrix into two matrices eg: P and Q. ALS rechnique
 
 ### Project#2: COLLABORATIVE FILTERING RECOMMENDER SYSTEM (K - nearest neighbors algorithm)
 
-Goal: Build an item-based collaborative filtering system based on K - nearest neighbors to find the three most similar products. I used Amazon Home and Kitchen reviews dataset from http://jmcauley.ucsd.edu/data/amazon/links.html. Also, build K neighbors classifier model to predict overall review rating based on text reviews. 
+Goal: Build an item-based collaborative filtering system based on K - nearest neighbors to find the three most similar products. I used Amazon Home and Kitchen reviews dataset from http://snap.stanford.edu/data/web-Amazon.html. Also, build K neighbors classifier model to predict overall review rating based on text reviews. 
 
 ### Project#3: SENTIMENT ANALYSIS (for a given product and a given customer)
 
@@ -64,5 +64,5 @@ I noticed that sklearn's svm.SVC() classifier is extremely slow.
 
 * Matrix Factorization: http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/
 * Recommendation Systems: http://infolab.stanford.edu/~ullman/mmds/ch9.pdf
-* http://jmcauley.ucsd.edu/data/amazon/
+* http://snap.stanford.edu/data/web-Amazon.html
 * Text Processing: https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/
