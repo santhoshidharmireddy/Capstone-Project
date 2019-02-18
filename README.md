@@ -20,10 +20,12 @@ Funk SVD Model Framework:
 There are lot of missing rating values in user's ratings dataset. One of the advantages of FunkSVD model is we do not have to fill the missing ratings with mean/zero values even though it bacame very dense matrix. After that I have done matrix factorization along with regularization to come up with meaningful latent factors. 
 
 Placeholer for minimizing equation
+
 <todo: paste equation image here>
 
 ALS Model Framework:
-Because both qi and pu are unknowns, the below equation is not convex. However, if we fix one of the unknowns, the optimization problem becomes quadratic and can be resolved optimally. Thus, ALS techniques rotate between fixing the qi's and fixing the pu's. When all pu's are fixed, the system recomputes the qi's by solving a least-squares problem, and vice versa. This ensures that each step decreases the cost function equation until convergence. While in general stochastic gradient descent is easier and faster than ALS, ALS is favorable in at least two cases. The first is when the system computes each qi independently of the other item factors and computes each pu independently of the other user factors. This gives rise to potentially massive parallalization of the algorithm. The second case is for systems centered in implicit data. Because the training set cannot be considered sparse, looping over each single training case as gradient descent does would not be practical. ALS can efficiently handle such cases. 
+
+ALS model decomposes ratings matrix into two matrices eg: P and Q. ALS rechnique rotate between fixing the Q's and fixing the P's. When all P's are fixed, the system rcomputes the Q's by solving a least-squares problem, and vice versa. This ensures that each step decreases the cost function equation until convergence. While SGD is easier and faster than ALS, ALS has at least two favorable cases. The first is when the system computes each Q independently of the other item factors and computes each P independently of the other user factors. This gives rise to potentially massive parallalization of the algorithm. The second case is for systems centered in implicit data. Because the training set cannot be considered sparse, looping over each single training case as gradient descent does would not be practical. ALS can efficiently handle such cases. 
 
 ### Project#2: COLLABORATIVE FILTERING RECOMMENDER SYSTEM (K - nearest neighbors algorithm)
 
