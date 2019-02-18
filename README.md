@@ -12,18 +12,19 @@ I used Amazon DataSet from http://snap.stanford.edu/data/web-Amazon.html. All th
 
 ### Project#1: PREDICT MISSING RATING (for a product using FunkSVD & ALS models)
 
-Summary:
+#### Summary:
 
 I mainly focused on building latent factor models such as FunkSVD and ALS. Latent factor models are an alternative approach that tries to explain the ratings by characterizing both items and users on, say, 20 to 100 factors inferred from the ratings patterns. In a sense, such factors comprise a computerized alternative to the aforementioned human created song genes. For, Clothing, shoes, and Jewelry, the discovered factors might measure obvious dimensions such as color, design and brand. For users, each factor measures how much the user likes products that score high on the corresponding product factor. Some of the most successful realizations of latent factor models are based on matrix factorization. In its basic form, matrix factorization characterizes both items and users by vectors of factors inferred from item rating patterns. High correspondence between item and user factors leads to a recommendation. Of course, matrix factorization is simply a mathematical tool for playing around with matrices, and is therefore applicable in many scenarios where on would like to find out something hidden under the data. These methods have become popular in recent years by combining good scalability with predictive accuracy. In addition, they offer much flexibility for modeling various real-life situations.
 
-Funk SVD Model Framework:
+#### Funk SVD Model Framework:
+
 There are lot of missing rating values in user's ratings dataset. One of the advantages of FunkSVD model is we do not have to fill the missing ratings with mean/zero values even though it bacame very dense matrix. After that I have done matrix factorization along with regularization to come up with meaningful latent factors. 
 
 Placeholer for minimizing equation
 
 <todo: paste equation image here>
 
-ALS Model Framework:
+#### ALS Model Framework:
 
 ALS model decomposes ratings matrix into two matrices eg: P and Q. ALS rechnique rotate between fixing the Q's and fixing the P's. When all P's are fixed, the system rcomputes the Q's by solving a least-squares problem, and vice versa. This ensures that each step decreases the cost function equation until convergence. While SGD is easier and faster than ALS, ALS has at least two favorable cases. The first is when the system computes each Q independently of the other item factors and computes each P independently of the other user factors. This gives rise to potentially massive parallalization of the algorithm. The second case is for systems centered in implicit data. Because the training set cannot be considered sparse, looping over each single training case as gradient descent does would not be practical. ALS can efficiently handle such cases. 
 
@@ -33,7 +34,7 @@ Goal: Build an item-based collaborative filtering system based on K - nearest ne
 
 ### Project#3: SENTIMENT ANALYSIS (for a given product and a given customer)
 
-Goals:
+#### Goals:
 
     1. Perform sentiment analysis using the below techniques:
 
